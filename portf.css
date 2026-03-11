@@ -1,0 +1,324 @@
+:root {
+    /*--main-color enna peru koduthu color store cheythu.
+    var() use cheythal ath eduthu apply cheyyam web nte evdim .
+    --main-color ith oru variable aahn.
+    :root is a fixed CSS pseudo-class.*/
+
+    --text-color: black;
+    --link-color: blue;
+    --background-color: rgb(176, 103, 103);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    /*font-family ennal text nte style maattunnath.
+    If Poppins load aayilla enkil, browser default sans-serif use cheyyum.*/
+
+    font-family: 'poppins', sans-serif;
+    background-color: var(--background-color);
+
+}
+a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    align-items: center;
+    height: 80px;
+}
+nav .left a{
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 200;
+}
+nav .right a{
+    color: var(--text-color);
+    /*0 y axis 10px x axis so,space vann rand icon n idayil*/
+    margin: 0 10px;
+}
+nav .right a:last-child{
+    /*a:lastchild paranja lastthe aahn angneatha email nte*/
+    color : var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+nav .right a span{
+    /*icon email thammil space varan*/
+    margin-left: 10px;
+}
+
+@media (max-width: 600px){
+    nav {
+        padding: 0 20px;
+    }
+    nav .right a {
+        font-size: 22px;
+    }
+    nav .right a:last-child{
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+    nav .right a span{
+        display: none;
+    }
+    /*section 2 skills*/
+
+    .skills-section{
+        padding: 0 20px;
+        margin: 20px;
+    }
+
+
+    /*contact section 4*/
+
+
+}
+
+
+
+
+
+
+
+
+/*section3 project section*/
+
+@media(max-width:768px){
+
+    .project-section .pictures{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+
+
+
+
+
+@media(max-width:850px){
+    /*section1 :hero*/
+    .hero-section .text h2{
+        font-size: 20px;
+    }
+}
+
+@media(max-width:740px){
+    .hero-section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*contact section4*/
+    .contact-section .group{
+        flex-direction: column;
+    }
+}
+
+@media(max-width:400px){
+    .hero-section .text .link{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.hero-section .text h2{
+    font-size: 45px;
+}
+.hero-section{
+    width: 100vw;
+    display: flex;
+    padding: 0 50px;
+    margin: 50px 0;
+    align-items: center;
+    margin-bottom: 100px;
+    justify-content: space-between;
+    gap: 50px;
+}
+.hero-section .text .link{
+    margin-top: 20px;
+}
+.hero-section .text{
+    flex: 7;
+}
+.hero-section .picture{
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+.hero-section img {
+    width: 450px;
+    height: 450px;
+    object-fit: contain;
+    
+}
+
+
+.hero-section .text .link a{
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-radius: 5px;
+    margin-right: 10px;
+
+}
+.hero-section .text .link a :hover{
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/*section 2 skills*/
+
+.skills-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+.skills-section h2{
+    text-align: center;
+    font-size: 30px;
+}
+.skills-section .text{
+    text-align: center;
+    margin-bottom: 20px;
+    text-indent: 20px;
+}
+
+.skills-section .cells{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.skills-section .cells .cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*html logo and html thammil gap */
+
+    gap: 7px;
+    width: 130px;
+    padding: 10px 20px;
+
+    border: 1.8px solid rgb(69, 68, 68);
+    border-radius: 5px;
+    margin: 10px;
+
+}
+.skills-section .cells .cell img{
+    width: 45px;
+}
+.skills-section .cells span{
+    font-size: 20px;
+}
+
+/*section3 project section*/
+.project-section h2{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.project-section .projectss{
+    text-align: center;
+    margin-bottom: 20px;
+    text-indent: 20px;
+}
+
+
+
+.project-section .pictures{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 20px;
+}
+
+.project-section .pictures img{
+    width: 100%;
+    height: auto;
+    border: 5px solid black;
+    display: block;
+}
+
+
+
+.contact-section h2{
+    font-size: 37px;
+}
+
+
+.contact-section{
+    padding: 30 10px;
+    margin: 50px;
+    text-indent: 30px;
+}
+.contact-section .group{
+    display: flex;
+    gap: 30px;
+}
+
+.contact-section .group .text{
+    flex: 3;
+    margin-top: 20px;
+}
+
+.contact-section .group form{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+.contact-section .group form input,
+.contact-section .group form textarea{
+    border: 2px solid var(--link-color);
+    margin-bottom: 20px;
+}
+.contact-section .group form button{
+    color: white;
+    border: none;
+    background-color: var(--link-color);
+    height: 50px;
+}
+
+
+
+
+
+/*LAST SE*/
+
+.last-sec{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(6, 6, 6);
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+#skill:hover{
+    background-color: rgb(158, 51, 21);
+}
+#project:hover{
+    background-color: darkmagenta;
+}
+#contact:hover{
+    background-color: rgb(42, 42, 106);
+}
+#hero-section:hover{
+    background-color: rgb(120, 32, 79);
+}
